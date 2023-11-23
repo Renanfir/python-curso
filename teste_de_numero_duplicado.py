@@ -16,7 +16,7 @@ def numeros_duplicados(numeros_inteiros):
    numero_verificado = set()
    pri_duplicado = -1
    
-    for numero in numeros_inteiros:
+   for numero in numeros_inteiros:
       if numero in numero_verificado:
          pri_duplicado = numero
          break

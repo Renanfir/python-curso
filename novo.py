@@ -1,5 +1,16 @@
-from sys import exit
+import copy
+from dadosexec import produtos
 
-print('Alou')
-exit()
-print('Alou')
+
+produtos_novos = [{**produto, 'nome':produto['nome'], 
+                   'preco': produto['preco']*1.1}
+                    
+                    for produto in copy.deepcopy(produtos)]
+
+
+produtos_ordenados_por_preco = sorted(
+    copy.deepcopy(produtos),
+    key=lambda p: p['preco']
+)
+
+print(*produtos_ordenados_por_preco, sep="\n")
