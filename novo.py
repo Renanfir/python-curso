@@ -13,4 +13,11 @@ produtos_ordenados_por_preco = sorted(
     key=lambda p: p['preco']
 )
 
+produtos_ordenados_por_nome = sorted(
+    copy.deepcopy(produtos),
+    key=lambda p: p['preco']
+)
+
 print(*produtos_ordenados_por_preco, sep="\n")
+print()
+print(*produtos_ordenados_por_nome, sep="\n")
