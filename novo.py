@@ -15,7 +15,7 @@ produtos_ordenados_por_preco = sorted(
 
 produtos_ordenados_por_nome = sorted(
     copy.deepcopy(produtos),
-    key=lambda p: p['preco']
+    key=lambda p: p['nome']
 )
 
 print(*produtos_ordenados_por_preco, sep="\n")
