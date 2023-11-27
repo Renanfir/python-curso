@@ -3,7 +3,7 @@ from dadosexec import produtos
 
 
 produtos_novos = [{**produto, 'nome':produto['nome'], 
-                   'preco': produto['preco']*1.1}
+                   'preco': round(produto['preco']*1.1, 2)}
                     
                     for produto in copy.deepcopy(produtos)]
 
@@ -18,6 +18,8 @@ produtos_ordenados_por_nome = sorted(
     key=lambda p: p['nome']
 )
 
+print(*produtos_novos, sep="\n")
+print()
 print(*produtos_ordenados_por_preco, sep="\n")
 print()
 print(*produtos_ordenados_por_nome, sep="\n")
