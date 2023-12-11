@@ -1,4 +1,4 @@
-caminho_arquivo = 'testando_samerda.txt'
+caminho_arquivo = 'pasta_criada.txt'
 
 with open(caminho_arquivo ,'w+') as arquivo:
     arquivo.write("l1\n")
