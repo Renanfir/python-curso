@@ -33,18 +33,22 @@ while opcao != 0: #enquanto a opção for diferente de 0 rode o programa em loop
     
     #opção de remoção do ultimo item
     elif opcao == 3:
+        ultimo_removido = (lista.pop(-1))
+        
         if not lista:
             try:
-                ultimo_removido = (lista.pop(-1))
+                ...
             except:
                 print("não há nada para remover")
 
     
     #opção de desfazer retirada
     elif opcao == 4:
+        lista.append(ultimo_removido)
+        
         if not lista:
             try:
-                lista.append(ultimo_removido)
+                ...
             except:
                 print("não há nada para desfazer")
         
