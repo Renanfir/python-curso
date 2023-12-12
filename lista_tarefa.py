@@ -13,12 +13,10 @@ print("---------------------------------------------")
 print()
 
 opcao = 1
-while opcao != 0: #enquanto a opção for diferente de 0, mostra, add, remover, desfazer, rode o programa em loop
+while opcao != 'SAIR': #enquanto a opção for diferente de 0, mostra, add, remover, desfazer, rode o programa em loop
     
     #input da opção
-    opcao = str(input("Digite SAIR para sair ou uma tarefa para ser adicionada: "))
-    opcao_upper = opcao.upper()
-
+    opcao = str(input(f'Digite "{"SAIR"}" para sair ou uma tarefa para ser adicionada: '))
 
     #opção de listagem
     if opcao == '1':
