@@ -12,11 +12,12 @@ print("-------------------------")
 print()
 
 opcao = 1
-while opcao != "0":
+while opcao != 0: #enquanto a opção for diferente de 0 rode o programa em loop
     
-    
+    #input da opção
     opcao = int(input("Digite algo que precisa fazer e 0 para sair do programa: "))
-    
+
+    #opção de listagem
     if opcao == 1:
         if not lista:
             print("não há nada para listar")
@@ -24,11 +25,13 @@ while opcao != "0":
             for i in lista:
                 print(i)
     
+    #opção de adicionar item
     elif opcao == 2:
         add = str(input("Digite oque deseja fazer: "))
         lista.append(add)
 
-
+    
+    #opção de remoção do ultimo item
     elif opcao == 3:
         if not lista:
             try:
@@ -36,7 +39,8 @@ while opcao != "0":
             except:
                 print("não há nada para remover")
 
-
+    
+    #opção de desfazer retirada
     elif opcao == 4:
         if not lista:
             try:
