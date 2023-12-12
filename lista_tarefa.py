@@ -1,4 +1,3 @@
-#voltar elemento tirado
 import os
 lista = []
 
