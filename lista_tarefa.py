@@ -1,39 +1,45 @@
 import os
 lista = []
+lista_desfazer = []
 
-print("-------------------------")
-print("|        OPÇÕES          |")
-print("|0 - SAIR                |")
-print("|1 - MOSTRA LISTA        |")
-print("|2 - ADD                 |")
-print("|3 - REMOVER ULTIMO      |")
-print("|4 - DESFAZER UMA REMOÇÃO|")
-print("-------------------------")
+print("---------------------------------------------")
+print("|                OPÇÕES                     |")
+print("|   PARA ADICIONAR BASTA DIGITAR A TAREFA   |")
+print("|   PARA SAIR DIGITE SAIR                   |")
+print("|   1 - MOSTRA                              |")
+print("|   2 - REMOVER                             |")
+print("|   3 - DESFAZER                            |")
+print("---------------------------------------------")
 print()
 
 opcao = 1
-while opcao != 0: #enquanto a opção for diferente de 0 rode o programa em loop
+while opcao != 0: #enquanto a opção for diferente de 0, mostra, add, remover, desfazer, rode o programa em loop
     
     #input da opção
-    opcao = int(input("Digite algo que precisa fazer e 0 para sair do programa: "))
+    opcao = str(input("Digite SAIR para sair ou uma tarefa para ser adicionada: "))
+    opcao_upper = opcao.upper()
+
 
     #opção de listagem
-    if opcao == 1:
+    if opcao == '1':
         if not lista:
             print("não há nada para listar")
         elif lista:
             for i in lista:
                 print(i)
-    
+
+
     #opção de adicionar item
-    elif opcao == 2:
-        add = str(input("Digite oque deseja fazer: "))
-        lista.append(add)
+    elif opcao != 'SAIR' and opcao != '1' and opcao != '2' and opcao != '3':
+        lista.append(opcao)
+
 
     
     #opção de remoção do ultimo item
-    elif opcao == 3:
+    elif opcao == '2':
+        
         ultimo_removido = (lista.pop(-1))
+        lista_desfazer.append(ultimo_removido)
         
         if not lista:
             try:
@@ -41,10 +47,12 @@ while opcao != 0: #enquanto a opção for diferente de 0 rode o programa em loop
             except:
                 print("não há nada para remover")
 
-    
+
+
     #opção de desfazer retirada
-    elif opcao == 4:
-        lista.append(ultimo_removido)
+    elif opcao == '3':
+        lista.append(lista_desfazer[-1])
+        lista_desfazer.pop(-1)
         
         if not lista:
             try:
