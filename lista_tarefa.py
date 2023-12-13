@@ -12,6 +12,27 @@ print("|   3 - DESFAZER                            |")
 print("---------------------------------------------")
 print()
 
+def mostra(lista):
+    if not lista:
+        print("Não há nada para apresentar")
+        return
+    print(lista)
+
+def remove(lista):
+    if not lista:
+        print("Não há nada para remover")
+        return
+    removido = lista.pop(-1)
+    lista_desfazer.append(removido)
+
+def desfaz(lista):
+    if not lista:
+        print("Não há nada para desfazer")
+        return
+    lista.append(lista_desfazer[-1])
+    lista_desfazer.pop(-1)
+
+
 opcao = 1
 while opcao != 'SAIR': #enquanto a opção for diferente de 0, mostra, add, remover, desfazer, rode o programa em loop
     
@@ -20,43 +41,21 @@ while opcao != 'SAIR': #enquanto a opção for diferente de 0, mostra, add, remo
 
     #opção de listagem
     if opcao == '1':
-        if not lista:
-            print("não há nada para listar")
-        elif lista:
-            for i in lista:
-                print(i)
+        mostra(lista)
 
 
     #opção de adicionar item
     elif opcao != 'SAIR' and opcao != '1' and opcao != '2' and opcao != '3':
         lista.append(opcao)
 
-
-    
     #opção de remoção do ultimo item
     elif opcao == '2':
+        remove(lista)
         
-        ultimo_removido = (lista.pop(-1))
-        lista_desfazer.append(ultimo_removido)
-        
-        if not lista:
-            try:
-                ...
-            except:
-                print("não há nada para remover")
-
-
 
     #opção de desfazer retirada
     elif opcao == '3':
-        lista.append(lista_desfazer[-1])
-        lista_desfazer.pop(-1)
-        
-        if not lista:
-            try:
-                ...
-            except:
-                print("não há nada para desfazer")
+        desfaz(lista)
         
         
 print("saiu do programa!")
