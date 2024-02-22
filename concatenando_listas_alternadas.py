@@ -1,12 +1,14 @@
-cidade = ['Salvador','Ubatuba','Belo horizonte']
-estado = ['BA','SP','MG']
+cidade = ['Salvador', 'Ubatuba', 'Belo horizonte']
+estado = ['BA', 'SP', 'MG']
 
+# Calculando o intervalo_maximo com o tamanho das palavras
 intervalo_maximo = min(len(cidade), len(estado))
 
-def concatenador(cid,est):
-    return[
-        (cid[i] +","+ est[i]) for i in range(intervalo_maximo)
-        ]
+# Concatenando
+def concatenador(cid, est):
+    return [
+        (cid[i] + "," + est[i]) for i in range(intervalo_maximo)
+    ]
 
-
-print(concatenador(cidade,estado))
+# Saída
+print(concatenador(cidade, estado))

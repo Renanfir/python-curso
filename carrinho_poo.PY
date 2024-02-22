@@ -22,8 +22,9 @@ class Produto:
 
 carrinho = Carrinho()
 
-p1 = Produto('iogurte',9)
-p2 = Produto('salgadinho',3)
+# Adicionando produtos
+p1 = Produto('iogurte', 9)
+p2 = Produto('salgadinho', 3)
 
 carrinho.inserir(p1,p2)
 carrinho.listar()

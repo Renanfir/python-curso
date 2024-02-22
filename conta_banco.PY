@@ -3,12 +3,13 @@ from abc import ABC, abstractclassmethod
 
 
 
-
+# Classe abstrata pessoa
 class Pessoa(ABC):
     def __init__(self, nome, idade):
         self._nome = nome
         self._idade = idade
 
+    #Getter e setter para nome e idade
     @property
     def nome(self):
         return self._nome

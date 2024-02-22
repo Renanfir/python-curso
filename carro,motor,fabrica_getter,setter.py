@@ -4,7 +4,7 @@ class Carro:
         self._motor = None
         self._fabrica = None
 
-    
+    # Getter e setter para motor
     @property
     def motor(self):
         return self._motor
@@ -13,7 +13,7 @@ class Carro:
     def setter_motor(self,valor):
         self._motor = valor
 
-
+    # Getter e setter para fabrica
     @property
     def fabrica(self):
         return self._fabrica
@@ -31,7 +31,7 @@ class Fabrica:
     def __init__(self,nome):
         self.nome = nome
 
-
+# Adicionando valores
 fusca = Carro('Fusca')
 motor = Motor('1300')
 fabrica = Fabrica('Volks')

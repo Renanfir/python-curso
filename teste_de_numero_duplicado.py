@@ -12,10 +12,13 @@ lista_de_listas_de_inteiros = [
     [5, 3, 1, 8, 5, 7, 1, 8, 8, 7],
     [10, 9, 8, 7, 6, 5, 4, 3, 2, 1],
 ]
+
+# Criando uma lista que não agrega numeros repetidos
 def numeros_duplicados(numeros_inteiros):
    numero_verificado = set()
    pri_duplicado = -1
-   
+
+   # Verificando numero por numero
    for numero in numeros_inteiros:
       if numero in numero_verificado:
          pri_duplicado = numero
@@ -23,5 +26,6 @@ def numeros_duplicados(numeros_inteiros):
       numero_verificado.add(numero)
    return pri_duplicado
 
+# Printando os elementos repetidos de cada linha
 for linha in lista_de_listas_de_inteiros:
    print(linha,numeros_duplicados(linha))

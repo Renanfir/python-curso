@@ -12,11 +12,13 @@ alunos = [
     {'nome': 'Anderson', 'nota': 'C'},
 ]
 
+# Função ordenadora por nota
 def ordena(aluno):
     return aluno['nota']
 
-alunos_agrupados = sorted(alunos, key= ordena)
-grupos = groupby(alunos_agrupados, key= ordena)
+
+alunos_agrupados = sorted(alunos, key=ordena)
+grupos = groupby(alunos_agrupados, key=ordena)
 
 for chave, grupo in grupos:
     print(chave)

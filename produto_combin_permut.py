@@ -1,9 +1,9 @@
 from itertools import product,permutations,combinations
 
-camisetas = [['preta','Branca'],
-             ['P','M','G','GG'],
-             ['Masc','Femi','unix'],
-             ['alg','poli']]
+camisetas = [['preta', 'Branca'],
+             ['P', 'M', 'G', 'GG'],
+             ['Masc', 'Femi', 'unix'],
+             ['alg', 'poli']]
 
 pessoas = [
     'João', 'Joana', 'Luiz', 'Letícia',

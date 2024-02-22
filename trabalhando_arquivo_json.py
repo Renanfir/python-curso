@@ -8,6 +8,7 @@ CAMINHO_ABSOLUTO_ARQUIVO = os.path.abspath(os.path.join(os.path.dirname(__file__
 print(os.path.dirname(__file__))
 
 
+# Criando uma classe com atributos nomeados
 class Movie(TypedDict):
     title: str
     original_title: str
@@ -17,7 +18,7 @@ class Movie(TypedDict):
     characters: list[str]
     budget: None
 
-
+# Adicionando conteudo aos atributos
 filme = {
     'title': 'O Senhor dos Anéis: A Sociedade do Anel',
     'original_title': 'The Lord of the Rings: The Fellowship of the Ring',
@@ -28,9 +29,11 @@ filme = {
     'budget': None,
 }
 
+# Criand oarquivo json e colando a variável filme
 with open(CAMINHO_ABSOLUTO_ARQUIVO, 'w') as arquivo:
     json.dump(filme, arquivo, ensure_ascii=False, indent=2)
 
+# Carregando a variavel filme do arquivo
 with open(CAMINHO_ABSOLUTO_ARQUIVO, 'r') as arquivo:
     filme_do_json = json.load(arquivo)
 

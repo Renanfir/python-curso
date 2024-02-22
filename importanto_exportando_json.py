@@ -1,21 +1,23 @@
 import os
 import json
 
+#Adcionando atributos para pessoa
 pessoa = {
     'nome': 'Reno',
-    'sobrenome' : 'Souza',
+    'sobrenome': 'Souza',
     'enderecos': [
-        {'rua':'R1', 'numero':32},
-        {'rua':'R2', 'numero':55}
+        {'rua': 'R1', 'numero':32},
+        {'rua': 'R2', 'numero':55}
     ],
     'altura': 1.9,
-    'numeros_pref': (2,4,6,8,10),
+    'numeros_pref': (2, 4, 6, 8, 10),
     'dev': True,
     'nada': None,
 }
 
+# Abrindo arquivo json e escrevendo o dict pessoa
 with open('aula4983.json', 'w+') as arquivo:
-    json.dump(pessoa, arquivo, indent = 2)
+    json.dump(pessoa, arquivo, indent=2)
 
 with open('aula4983.json', 'r', encoding="utf-8") as arquivo:
     pessoa = json.load(arquivo)

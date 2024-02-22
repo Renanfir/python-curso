@@ -4,6 +4,7 @@ produtos = [
     {'nome': 'p3', 'preco': 30, },
 ]
 
+
 novo_produto = [{**produto, 'nome':produto['nome'], 'preco': produto['preco']*2}
                  
                  if produto['preco'] > 20

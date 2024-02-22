@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+# Criando classe abstrata
 class Forma(ABC):
     @abstractmethod
     def calculo_area(self):
@@ -9,7 +10,7 @@ class Forma(ABC):
     def calculo_perimetro(self):
         ...
 
-
+# Criando quadrado com a forma abstrata
 class Quadrado(Forma):
     def __init__(self,lado) -> None:
         super().__init__()
@@ -22,7 +23,7 @@ class Quadrado(Forma):
         return self.lado * 4
 
 
-
+# Criando circulo com a forma abstrata
 class Circulo(Forma):
     def __init__(self,raio) -> None:
         super().__init__()
@@ -36,7 +37,7 @@ class Circulo(Forma):
 
 circulo = Circulo(3)
 quadrado = Quadrado(2)
-
+# Saída dos calculos
 print(circulo.calculo_area())
 print(circulo.calculo_perimetro())
 print()
